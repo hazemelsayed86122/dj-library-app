@@ -4,6 +4,24 @@ This document serves as the living source of truth for the DJ app project. It mu
 
 ---
 
+## GitHub Repository
+
+**URL:** https://github.com/hazemelsayed86122/dj-library-app
+
+All project files are version-controlled here. Every session should start by cloning/pulling the latest code and end by pushing any changes back.
+
+**Session Start Command:**
+```bash
+git clone https://github.com/hazemelsayed86122/dj-library-app /home/ubuntu/djapp && cd /home/ubuntu/djapp && cat PROJECT.md
+```
+
+**Session End Command:**
+```bash
+cd /home/ubuntu/djapp && git add . && git commit -m "Session [DATE]: [brief description]" && git push origin main
+```
+
+---
+
 ## 1. Product Vision
 
 ### Core Concept
@@ -100,11 +118,39 @@ The app becomes smarter over time through two mechanisms:
 
 ---
 
-## 7. Next Session Brief
+## 7. Session Workflow
 
-**Status:** Ready to begin development.
+### How to Start Every Session
+1. Open a new Manus conversation in **this same Manus project**.
+2. Say: *"Continue building the DJ app. Clone the repo and read the project bible."*
+3. Manus runs the Session Start Command above, reads this file, and picks up exactly where things left off.
+
+### How to End Every Session
+1. Manus updates `CHANGELOG.md` with what was built.
+2. Manus updates the Phase Status and Next Session Brief below.
+3. Manus runs the Session End Command above to push all changes to GitHub.
+
+---
+
+## 8. Phase Status
+
+| Phase | Status | Notes |
+|---|---|---|
+| Phase 1: MVP | Not started | Ready to begin |
+| Phase 2: Smarter Organization | Not started | Awaiting Phase 1 |
+| Phase 3: Playlist Engine | Not started | Awaiting Phase 2 |
+| Phase 4: Accounts & Feedback | Not started | Awaiting Phase 3 |
+| Phase 5: Community Intelligence | Not started | Awaiting Phase 4 |
+| Phase 6: Monetization | Not started | Awaiting Phase 5 |
+
+---
+
+## 9. Next Session Brief
+
+**Status:** GitHub repository set up. Project bible complete. Ready to build.
 **Next Action:** Start Phase 1 (MVP).
-1. Initialize the Python backend and React frontend scaffolding.
-2. Implement the basic audio upload endpoint.
-3. Integrate `librosa` to extract BPM and key from a sample audio file.
-4. Build the basic frontend table to display the extracted metadata.
+1. Initialize the Python (FastAPI) backend with a `/upload` endpoint.
+2. Install `librosa` and extract BPM + key from an uploaded audio file.
+3. Initialize the React + TailwindCSS frontend with a drag-and-drop upload component.
+4. Display extracted metadata in a sortable library table.
+5. Test end-to-end with a sample MP3 file.
